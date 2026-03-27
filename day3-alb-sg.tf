@@ -29,7 +29,7 @@
 }
 
 #lets create the varaibles files for alb
-  #lets create a new file b2.alb-port-varaibles after this do terraform apply we are just opening port 80 and 443 for the load balancer
+  #lets create a new file b2.alb-port-varaibles.tf after this do terraform apply we are just opening port 80 and 443 for the load balancer
   variable "allowed_alb_ingress_ports" {
   type        = list(number)
   default     = [80, 443]
