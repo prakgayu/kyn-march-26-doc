@@ -10,14 +10,14 @@
 
   key_name               = "gopal"
   vpc_security_group_ids = [aws_security_group.web_sg.id]
-  user_data = <<-EOF
-               #!/bin/bash
-               yum update -y
-               yum install httpd -y
-               systemctl start httpd
-               systemctl enable httpd
-               echo "Welcome to terraform test from $HOSTNAME" > /var/www/html/index.html
-               EOF
+ user_data = base64encode(<<EOF
+#!/bin/bash
+yum install httpd -y
+systemctl start httpd
+systemctl enable httpd
+echo "Hello from Auto Scaling" > /var/www/html/index.html
+EOF
+)
 }
 
   
