@@ -1,0 +1,10 @@
+##lets delete some files and folder from your project folder
+  ##before that do terraform destroy
+  terraform destroy
+  #############################################
+  ##then delete folder 
+  .terraform 
+  terraform.tfstate
+  terraform.tfstate.backup
+  .terraform.lock.hcl
+  ###then go to amazon search for s3
