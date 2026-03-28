@@ -53,4 +53,7 @@
   545  git commit -m "added addtion program"
 #finally git log will show there is two commit 
   546  git log
-
+#lets generate the ssh key after running this command just press enter enter and enter this will generate the public key
+ 550  ssh-keygen -t rsa
+##to check the public key cat and give the path
+  551  cat /c/Users/gopal/.ssh/id_rsa.pub
