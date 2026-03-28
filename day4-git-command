@@ -26,3 +26,31 @@
     #lets re instialzied it 
   524  git init
     ################################
+ 527  cat calcy.py
+#we are adding an line in my calcy app
+  528  echo "we are starting with an calcy program" > calcy.py
+  529  cat calcy.py
+  530  git status
+#once i added the line we need to move this file to an staging area for commit git add command will move this file to an staging area
+  531  git add calcy.py
+  532  git status
+#finally git commit -m message always give an menaing message so that you now what changes you have done
+  533  git commit -m "started calcy program"
+  534  git status
+#this will show the first commit 
+  535  git log
+
+#we will add another line 
+  540  echo "we are starting addion program" >> calcy.py
+#now git status will show that calcy file is modified as it is comparing the file with your previous commit
+  541  git status
+#git diff will show what changes is there 
+  542  git diff
+#lets add it again 
+  543  git add calcy.py
+  544  git status
+#do a commit
+  545  git commit -m "added addtion program"
+#finally git log will show there is two commit 
+  546  git log
+
